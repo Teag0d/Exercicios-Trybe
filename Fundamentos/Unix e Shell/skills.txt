@@ -1,0 +1,11 @@
+Bash
+CSS
+HTML
+Internet
+Java
+Javascript
+Python
+Unix
+
+
+sort -o arquivo(usado) arquivo(praondevai)
