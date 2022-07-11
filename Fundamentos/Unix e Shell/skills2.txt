@@ -6,3 +6,4 @@ CSS
 HTML
 Python
 Java
+MySQL
