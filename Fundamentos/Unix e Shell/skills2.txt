@@ -6,5 +6,7 @@ CSS
 HTML
 Python
 Java
+MySQL
+POO
 React
 Mongo
