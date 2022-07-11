@@ -6,3 +6,5 @@ CSS
 HTML
 Python
 Java
+React
+Mongo
