@@ -1,4 +1,3 @@
-Aqui vamos deselvolver exercícios do Curso da Trybe!
-Na jornada para se tornar um Web Developer GitHub é essencial
-Vamos evoluir!
-Booora!
+> > > > Exercícios!!
+
+Nesta pasta ficarão os exercícios para pratica, feitos durante o curso da <b>Trybe</b>.
