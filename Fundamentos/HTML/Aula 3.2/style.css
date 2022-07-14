@@ -18,16 +18,19 @@ ul {
 
 #paragrafo {
   font-weight: 600;
-  font-size: 48px;
+  font-size: 3em;
   color: white;
 }
 
 .amarelo {
+  font-style: italic;
   background-color: yellow;
 }
 .vermelho {
+  line-height: 25px;
   background-color: red;
 }
 .marrom {
+  text-align: center;
   background-color: brown;
 }
