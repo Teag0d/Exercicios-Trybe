@@ -1,34 +1,64 @@
-h1,
-p {
-  text-align: center;
-}
-
-.lista {
-  list-style: none;
-}
-
-.titulo {
-  background-color: red;
-  font-size: 1.5em;
-}
-
-.paragrafos {
-  background-color: blue;
-}
-
-.listaordenada {
-  background-color: green;
-}
-
-.listanaoord {
-  background-color: pink;
-}
-
-.listaordenada:hover {
-  background-color: aqua;
+h1 {
+  font-size: 40px;
   border-style: solid;
+  border-color: black;
+  border-width: 1px;
 }
 
-.listanaoord:active {
-  background-color: orange;
+h1,
+h3 {
+  color: red;
+}
+
+.orderedlist {
+  background-color: yellow;
+}
+
+.olpar {
+  color: green;
+}
+
+.olimpar {
+  text-transform: uppercase;
+}
+
+li {
+  font-size: 20px;
+}
+
+.litalic {
+  font-weight: bold;
+}
+
+.fontblue {
+  color: blue;
+}
+
+#bgpink {
+  background-color: rgb(255, 142, 160);
+}
+
+.stack:hover {
+  font-weight: bold;
+  color: orange;
+}
+
+.w3:hover {
+  font-weight: bold;
+  color: green;
+}
+
+.mdn:hover {
+  font-weight: bold;
+  color: black;
+}
+
+.dev:hover {
+  font-weight: bold;
+  color: yellow;
+}
+
+.trybe:hover {
+  font-weight: bold;
+  color: lightgreen;
 }
