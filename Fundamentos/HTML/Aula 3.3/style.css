@@ -1,34 +1,34 @@
-.super-mario {
-  width: 200px;
-  position: absolute;
-  z-index: 2;
+h1,
+p {
+  text-align: center;
 }
 
-.goomba {
-  width: 100px;
-  position: absolute;
-  left: 200px;
-  top: 300px;
-  z-index: 1;
+.lista {
+  list-style: none;
 }
 
-.baloon {
-  position: absolute;
-  top: 450px;
-  z-index: 3;
+.titulo {
+  background-color: red;
+  font-size: 1.5em;
 }
 
-.speach {
-  font-size: 25px;
-  position: absolute;
-  top: 500px;
-  left: 30px;
-  z-index: 4;
+.paragrafos {
+  background-color: blue;
 }
 
-.bowser {
-  width: 200px;
-  position: absolute;
-  left: 250px;
-  top: 650px;
+.listaordenada {
+  background-color: green;
+}
+
+.listanaoord {
+  background-color: pink;
+}
+
+.listaordenada:hover {
+  background-color: aqua;
+  border-style: solid;
+}
+
+.listanaoord:active {
+  background-color: orange;
 }
