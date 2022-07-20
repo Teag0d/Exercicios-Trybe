@@ -108,7 +108,7 @@
 // console.log(totalEarnings)
 
 // ex 11
-const salaryBrute = 10000;
+const salaryBrute = 3000;
 let taxIr;
 let taxInss;
 
@@ -138,3 +138,4 @@ if (salaryBase <= 1903.98) {
 console.log(taxIr);
 const finalSalary = salaryBase - taxIr;
 console.log(salaryBase);
+console.log(finalSalary);
