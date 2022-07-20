@@ -107,4 +107,34 @@
 // const totalEarnings = earnings * amountSold
 // console.log(totalEarnings)
 
-ex 11
+// ex 11
+const salaryBrute = 10000;
+let taxIr;
+let taxInss;
+
+if (salaryBrute <= 1556.94) {
+  taxInss = salaryBrute * 0.08;
+} else if (salaryBrute >= 1556.95 && salaryBrute <= 2594.92) {
+  taxInss = salaryBrute * 0.09;
+} else if (salaryBrute >= 2594.93 && salaryBrute <= 5189.82) {
+  taxInss = salaryBrute * 0.11;
+} else if (salaryBrute >= 5189.82) {
+  taxInss = 570.88;
+}
+console.log(taxInss);
+const salaryBase = salaryBrute - taxInss;
+
+if (salaryBase <= 1903.98) {
+  taxIr = 0;
+} else if (salaryBase <= 2826.65) {
+  taxIr = salaryBase * 0.075 - 142.8;
+} else if (salaryBase <= 3751.05) {
+  taxIr = salaryBase * 0.15 - 354.8;
+} else if (salaryBase <= 4664.68) {
+  taxIr = salaryBase * 0.225 - 636.13;
+} else if (salaryBase > 4664.68) {
+  (taxIr = salaryBase * 0.275 - 869), 36;
+}
+console.log(taxIr);
+const finalSalary = salaryBase - taxIr;
+console.log(salaryBase);
