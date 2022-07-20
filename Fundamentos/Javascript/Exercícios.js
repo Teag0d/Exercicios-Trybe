@@ -81,7 +81,7 @@
 // }
 // console.log(scoreConverted);
 
-// ex 8
+// ex 8 & 9
 // const isEven1 = 8;
 // const isEven2 = ;
 // const isEven3 = 10;
@@ -97,3 +97,14 @@
 //   } else {
 //     console.log(false);
 //   }
+
+// ex10
+// const cost = 100
+// const sell = 150
+// const tax = 0.2
+// const earnings = sell -(cost * tax)
+// const amountSold = 1000
+// const totalEarnings = earnings * amountSold
+// console.log(totalEarnings)
+
+ex 11
