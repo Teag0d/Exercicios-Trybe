@@ -1,6 +1,6 @@
-const a = 5;
-const b = 8;
-const c = 10;
+// const a = 5;
+// const b = 8;
+// const c = 10;
 
 // const sum = a + b;
 // const subtract = a - b;
@@ -24,10 +24,22 @@ const c = 10;
 //   console.log(c);
 // }
 
-if (a > 0) {
-  console.log("positive");
-} else if (a < 0) {
-  console.log("negative");
+// if (a > 0) {
+//   console.log("positive");
+// } else if (a < 0) {
+//   console.log("negative");
+// } else {
+//   console.log("zero");
+// }
+
+const a = 90;
+const b = 50;
+const c = 50;
+
+if (a < 0 || b < 0 || c < 0) {
+  console.log("error: um dos angulos é negativo e não existe");
+} else if (a > 0 && b > 0 && c > 0 && a + b + c <= 180) {
+  console.log(true);
 } else {
-  console.log("zero");
+  console.log(false);
 }
