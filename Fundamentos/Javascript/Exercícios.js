@@ -32,14 +32,33 @@
 //   console.log("zero");
 // }
 
-const a = 90;
-const b = 50;
-const c = 50;
+// const a = 90;
+// const b = 50;
+// const c = 50;
 
-if (a < 0 || b < 0 || c < 0) {
-  console.log("error: um dos angulos é negativo e não existe");
-} else if (a > 0 && b > 0 && c > 0 && a + b + c <= 180) {
-  console.log(true);
+// if (a < 0 || b < 0 || c < 0) {
+//   console.log("error: um dos angulos é negativo e não existe");
+// } else if (a > 0 && b > 0 && c > 0 && a + b + c <= 180) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
+
+const inputUser = "Pawn";
+chessPiece = inputUser.toLowerCase();
+
+if (chessPiece === "pawn") {
+  console.log("Moves forward");
+} else if (chessPiece === "tower") {
+  console.log("Moves in straight lines");
+} else if (chessPiece === "knight") {
+  console.log("Moves in L shapes");
+} else if (chessPiece === "bishop") {
+  console.log("Moves in diagonals");
+} else if (chessPiece === "queen") {
+  console.log("Moves in all directions");
+} else if (chessPiece === "king") {
+  console.log("Moves in all directions, but only 1 house");
 } else {
-  console.log(false);
+  console.log("This is not a chess piece!");
 }
