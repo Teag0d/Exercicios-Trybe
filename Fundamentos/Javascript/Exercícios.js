@@ -44,21 +44,39 @@
 //   console.log(false);
 // }
 
-const inputUser = "Pawn";
-chessPiece = inputUser.toLowerCase();
+// const inputUser = "Pawn";
+// chessPiece = inputUser.toLowerCase();
 
-if (chessPiece === "pawn") {
-  console.log("Moves forward");
-} else if (chessPiece === "tower") {
-  console.log("Moves in straight lines");
-} else if (chessPiece === "knight") {
-  console.log("Moves in L shapes");
-} else if (chessPiece === "bishop") {
-  console.log("Moves in diagonals");
-} else if (chessPiece === "queen") {
-  console.log("Moves in all directions");
-} else if (chessPiece === "king") {
-  console.log("Moves in all directions, but only 1 house");
-} else {
-  console.log("This is not a chess piece!");
+// if (chessPiece === "pawn") {
+//   console.log("Moves forward");
+// } else if (chessPiece === "tower") {
+//   console.log("Moves in straight lines");
+// } else if (chessPiece === "knight") {
+//   console.log("Moves in L shapes");
+// } else if (chessPiece === "bishop") {
+//   console.log("Moves in diagonals");
+// } else if (chessPiece === "queen") {
+//   console.log("Moves in all directions");
+// } else if (chessPiece === "king") {
+//   console.log("Moves in all directions, but only 1 house");
+// } else {
+//   console.log("This is not a chess piece!");
+// }
+
+const score = ;
+let scoreConverted;
+
+if (score < 50) {
+  scoreConverted = "F";
+} else if (score >= 50 && score < 60) {
+  scoreConverted = "E";
+} else if (score >= 60 && score < 70) {
+  scoreConverted = "D";
+} else if (score >= 70 && score < 80) {
+  scoreConverted = "C";
+} else if (score >= 80 && score < 90) {
+  scoreConverted = "B";
+} else if (score >= 90) {
+  scoreConverted = "A";
 }
+console.log(scoreConverted);
