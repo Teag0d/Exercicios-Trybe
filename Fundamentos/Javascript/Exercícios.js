@@ -63,20 +63,37 @@
 //   console.log("This is not a chess piece!");
 // }
 
-const score = ;
-let scoreConverted;
+// const score = ;
+// let scoreConverted;
 
-if (score < 50) {
-  scoreConverted = "F";
-} else if (score >= 50 && score < 60) {
-  scoreConverted = "E";
-} else if (score >= 60 && score < 70) {
-  scoreConverted = "D";
-} else if (score >= 70 && score < 80) {
-  scoreConverted = "C";
-} else if (score >= 80 && score < 90) {
-  scoreConverted = "B";
-} else if (score >= 90) {
-  scoreConverted = "A";
-}
-console.log(scoreConverted);
+// if (score < 50) {
+//   scoreConverted = "F";
+// } else if (score >= 50 && score < 60) {
+//   scoreConverted = "E";
+// } else if (score >= 60 && score < 70) {
+//   scoreConverted = "D";
+// } else if (score >= 70 && score < 80) {
+//   scoreConverted = "C";
+// } else if (score >= 80 && score < 90) {
+//   scoreConverted = "B";
+// } else if (score >= 90) {
+//   scoreConverted = "A";
+// }
+// console.log(scoreConverted);
+
+// ex 8
+// const isEven1 = 8;
+// const isEven2 = ;
+// const isEven3 = 10;
+// is even
+// if (isEven1 % 2 == 0 || isEven2 % 2 == 0 || isEven3 % 2 == 0) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
+// is odd
+// if (isEven1 % 2 !== 0 || isEven2 % 2 !== 0 || isEven3 % 2 !== 0) {
+//     console.log(true);
+//   } else {
+//     console.log(false);
+//   }
