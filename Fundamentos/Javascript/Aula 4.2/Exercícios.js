@@ -1,4 +1,4 @@
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+// let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 // ex1
 // for (let i = 0; i < numbers.length; i++) {
 //   console.log(numbers[i]);
@@ -52,3 +52,41 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 // for (let i = 0; i< myArray.length; i++) {
 //   console.log(myArray[i]/2);
 // }
+
+// ex bonus 1 e 2
+// let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+// //crescente
+//   for  (let i = 0; i < numbers.length; i++) {
+//     for (let j = 0; j < i; j++) {
+//       if (numbers[i] < numbers[j]){
+//         let position = numbers[i]
+//         numbers[i] = numbers[j]
+//         numbers[j] = position
+//       }
+//     }
+//   }
+// console.log(numbers)
+// //decrescente
+// for  (let i = 0; i < numbers.length; i++) {
+//   for (let j = 0; j < i; j++) {
+//     if (numbers[i] > numbers[j]){
+//       let position = numbers[i]
+//       numbers[i] = numbers[j]
+//       numbers[j] = position
+//     }
+//   }
+// }
+// console.log(numbers)
+
+// bonus 3
+// let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+// let newArray = [];
+// for (let i = 0; i < numbers.length; i++) {
+//   if (i < numbers.length) {
+//     newArray.push(numbers[i] * 2);
+//   } else {
+//     newArray.push(numbers[i] * numbers[i + 1]);
+//   }
+// }
+// console.log(numbers.length);
+// console.log(newArray);
