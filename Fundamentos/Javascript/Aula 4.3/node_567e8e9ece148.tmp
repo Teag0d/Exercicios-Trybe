@@ -1,0 +1,15 @@
+// ex 1
+// const n = 10;
+// let resultado = 1;
+// for (let i = n; i > 0; i--) {
+//   resultado = resultado * i;
+// }
+// console.log(resultado);
+
+// ex 2
+let word = 'tryber'
+let wordReversed
+for (let i = word.length; i >= 0; i++) {
+  wordReversed += word[i]
+}  
+console.log(wordReversed);
