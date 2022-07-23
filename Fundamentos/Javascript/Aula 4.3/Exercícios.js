@@ -46,8 +46,8 @@
 // }
 // console.log(biggestPrime);
 
-// bonus 1
-// let value = 10
+// // bonus 1
+// let value = 5
 // let output = ''
 // for (let i = 0; i < value; i++){
 //   output += '*'
@@ -57,7 +57,7 @@
 // }
 
 // // bonus 2
-// let value = 5
+// let value = 10
 // let output = ''
 // for (let i = 0; i < value; i++) {
 //   console.log(output)
@@ -65,3 +65,34 @@
 // }
 
 // bonus 3
+// 3- Agora inverta o lado do triângulo.
+// let n = 10;
+// let output = "";
+// let symbol = "*";
+// let espacos = n - 1;
+// let insertSymbol = 1
+// for (let i = 0; i < n; i++) {
+//   for (let j = espacos; j > 0; j--) {
+//     output += " ";
+//   }
+//   for (let s = 0; s < insertSymbol; s+= 1){
+//   output += symbol
+//   }
+//   console.log(output)
+//   espacos -= 1
+//   insertSymbol += 1
+//   output = ''
+// }
+
+// bonus 4
+// 4- Depois, faça uma pirâmide com n asteriscos de base:
+let n = 5;
+let mid = n / 2;
+let left = 1;
+let right = 1;
+let space = mid - 1;
+let output = "";
+
+for (let i = 0; i < space; i++) {
+  output += " ";
+}
