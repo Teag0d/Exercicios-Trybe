@@ -107,7 +107,7 @@
 //   mid -= 1
 // }
 
-//bonus 5
+// //bonus 5
 let n = 7;
 let mid = n / 2;
 let sides = 1;
@@ -133,3 +133,18 @@ for (let line = 0; line < mid; line++) {
   output = "";
   space -= 1;
 }
+
+// // bonus 6
+// let prime = 47
+// isPrime = true
+
+// for (let i = 2; i < prime; i++) {
+//   if (prime % i === 0){
+//     isPrime = false
+//   }
+// }
+// if (isPrime) {
+//   console.log(`O numero ${prime}, é primo!`)
+// } else {
+//   console.log(`O numero ${prime}, não é primo!`)
+// }
