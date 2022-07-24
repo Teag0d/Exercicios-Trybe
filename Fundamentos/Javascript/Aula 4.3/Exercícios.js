@@ -108,23 +108,28 @@
 // }
 
 //bonus 5
-let n = 10;
+let n = 7;
 let mid = n / 2;
 let sides = 1;
 let space = n / 2;
 let output = "";
+let noSymbol = 0;
 
-for (let line = 0; line < space; line++) {
-  for (line2 = 0; line2 < mid; line2++) {
+for (let line = 0; line < mid; line++) {
+  if (line > 0 && line < mid - 0.5) noSymbol += 1;
+  for (line2 = 0; line2 < space; line2++) {
     output += " ";
   }
   for (let column = 0; column < sides; column += 1) {
-    if (column < mid) {
+    if (column === noSymbol && line !== 0 && line !== mid - 0.5) {
+      output += " ";
+    } else {
+      output += "*";
     }
-    output += "*";
   }
+
   sides += 2;
   console.log(output);
   output = "";
-  mid -= 1;
+  space -= 1;
 }
