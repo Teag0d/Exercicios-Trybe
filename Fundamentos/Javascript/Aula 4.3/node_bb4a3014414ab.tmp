@@ -86,45 +86,19 @@
 
 // bonus 4
 // 4- Depois, faça uma pirâmide com n asteriscos de base:
-// let n = 10;
-// let mid = n / 2;
-// let sides = 1;
-// let space = n/2;
-// let output = "";
-
-// for (let line = 0; line < space; line++) {
-//   for (line2= 0; line2 < mid; line2++){
-//     output += ' '
-//     }
-//     for (let column = 0; column < sides; column += 1) {
-//       if (column < mid){
-//       }
-//       output += "*";
-//     }
-//   sides += 2;
-//   console.log(output);
-//   output = "";
-//   mid -= 1
-// }
-
-//bonus 5
-let n = 10;
+let n = 5;
 let mid = n / 2;
 let sides = 1;
-let space = n / 2;
+let space = mid;
 let output = "";
 
-for (let line = 0; line < space; line++) {
-  for (line2 = 0; line2 < mid; line2++) {
+for (let j = 0; j < sides; j += 1) {
+  output += "*";
+  for (let i = 0; i < mid; i++) {
     output += " ";
+    sides += 2;
+    console.log(output);
+    output = "";
   }
-  for (let column = 0; column < sides; column += 1) {
-    if (column < mid) {
-    }
-    output += "*";
-  }
-  sides += 2;
-  console.log(output);
-  output = "";
-  mid -= 1;
 }
+// for ()
