@@ -89,50 +89,42 @@
 // let n = 10;
 // let mid = n / 2;
 // let sides = 1;
-// let space = n/2;
+// let space = n / 2;
 // let output = "";
 
 // for (let line = 0; line < space; line++) {
-//   for (line2= 0; line2 < mid; line2++){
-//     output += ' '
-//     }
-//     for (let column = 0; column < sides; column += 1) {
-//       if (column < mid){
-//       }
-//       output += "*";
-//     }
+//   for (line2 = 0; line2 < mid; line2++) {
+//     output += " ";
+//   }
+//   for (let column = 0; column < sides; column += 1) {
+//     output += "*";
+//   }
 //   sides += 2;
 //   console.log(output);
 //   output = "";
-//   mid -= 1
+//   mid -= 1;
 // }
 
 // //bonus 5
-let n = 7;
-let mid = n / 2;
-let sides = 1;
-let space = n / 2;
-let output = "";
-let noSymbol = 0;
+// let n = 7;
+// let mid = (n + 1) / 2;
+// let left = mid;
+// let right = mid;
+// let symbol = "*";
 
-for (let line = 0; line < mid; line++) {
-  if (line > 0 && line < mid - 0.5) noSymbol += 1;
-  for (line2 = 0; line2 < space; line2++) {
-    output += " ";
-  }
-  for (let column = 0; column < sides; column += 1) {
-    if (column === noSymbol && line !== 0 && line !== mid - 0.5) {
-      output += " ";
-    } else {
-      output += "*";
-    }
-  }
-
-  sides += 2;
-  console.log(output);
-  output = "";
-  space -= 1;
-}
+// for (let line = 1; line <= mid; line++) {
+//   let output = "";
+//   for (let col = 1; col <= n; col++) {
+//     if (col === left || col === right || line === mid) {
+//       output += symbol;
+//     } else {
+//       output += " ";
+//     }
+//   }
+//   left -= 1;
+//   right += 1;
+//   console.log(output);
+// }
 
 // // bonus 6
 // let prime = 47
