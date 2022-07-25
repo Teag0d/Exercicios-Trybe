@@ -52,11 +52,27 @@
 // console.log(biggestChar(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']))
 
 // ex 5
-// function mostAppreances(array){
-//   for (let i = 0; i < array.length; i+= 1){
+// function mostAppreances(array) {
+//   let count = 0;
+//   let biggestCount = 0;
+//   let biggestCountElement;
 
+//   for (let i = 0; i < array.length; i += 1) {
+//     let element = array[i];
+//     count = 0;
+//     for (let j = 0; j < array.length; j++) {
+//       if (array[j] === element) {
+//         count += 1;
+//       }
+//     }
+//     if (count > biggestCount) {
+//       biggestCount = count;
+//       biggestCountElement = element;
+//     }
 //   }
+//   return biggestCountElement;
 // }
+// console.log(mostAppreances([2, 3, 2, 5, 8, 2, 3]));
 
 //ex 6
 // function sum(number){
