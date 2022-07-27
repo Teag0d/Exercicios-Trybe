@@ -1,13 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+
+    <style>
+      main,
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
   </head>
   <body>
-    <script src="script.js"></script>
+    <header>
+      <h1 class="title">Exercício 5.1 - JavaEscripito</h1>
+    </header>
+    <main class="main-content">
+      <section class="center-content">
+        <p class="p">Texto padrão do nosso site</p>
+        <p class="p" id="in-2-years">-----</p>
+        <p class="p" id="green">Trybe</p>
+      </section>
+    </main>
+    <script>
+      /*
+             Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
+             - document.getElementById()
+             - document.getElementsByClassName()
+             - document.getElementsByTagName()
+      Crie e execute uma função que mude o texto na tag `<p>-----</p>`, para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
+      Crie e execute uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
+      Crie e execute uma função que mude a cor do quadrado vermelho para branco.
+      Crie e execute uma função que corrija o texto da tag <h1>.
+      Crie e execute uma função que modifique todo o texto da tag <p> para maiúsculo.
+      Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
+             */
+      function twoYears(text) {
+        document.getElementById("in-2-years").innerHTML = text;
+      }
+      twoYears("Morando e trabalhando nos EUA");
+
+      function yellowToGreen(element) {
+        document.getElementById(element).style.backgroundColor = "green";
+      }
+      yellowToGreen("green");
+
+      function changeBgWhite(element, color) {
+        document.getElementsByClassName(element)[0].style.backgroundColor =
+          color;
+      }
+      changeBgWhite("center-content", "white");
+
+      function changeH1Text(text) {
+        document.getElementsByClassName("title")[0].innerHTML = text;
+      }
+      changeH1Text("Exercício 5.1 - JavaScript");
+
+      function toUppercase(elem) {
+        let paragraph = document.getElementsByTagName("p")[0];
+        paragraph.innerHTML = paragraph.innerHTML.toUpperCase();
+      }
+      toUppercase("p");
+
+      function showParagraph() {
+        let paragraph = document.getElementsByTagName("p");
+        console.log(paragraph);
+        for (let i = 0; i < paragraph.length; i++) {
+          console.log(paragraph[i].innerHTML);
+        }
+      }
+      showParagraph();
+    </script>
   </body>
 </html>
