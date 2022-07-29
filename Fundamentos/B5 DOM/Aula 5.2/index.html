@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // COLOQUE SEU CÓDIGO AQUI
+
+      //função para criar elemento filho com classes
+      function createChild(element, classes) {
+        let child = document.createElement(element);
+        child.className = classes;
+        return child;
+      }
+      //função para atelar elemento filho ao pai
+      function fatherChild(father, cChild) {
+        let fatherElem = document.querySelector(father);
+        fatherElem.appendChild(cChild);
+      }
+      //função para trocar texto do elemento
+      function changeText(element, text) {
+        let changeText = document.querySelector(element);
+        changeText.innerHTML = text;
+      }
+      //função para adcionar uma imagem com source e classes
+      function addImg(father, source, classes) {
+        let img = document.createElement("img");
+        img.src = source;
+        img.className = classes;
+        let fatherToImg = document.querySelector(father);
+        fatherToImg.appendChild(img);
+      }
+      //função para adcionar elementos li em uma lista
+      function addLi(father, array, classes) {
+        let fatherToLi = document.querySelector(father);
+        for (let i = 0; i < array.length; i += 1) {
+          let li = document.createElement("li");
+          li.innerHTML = array[i];
+          li.className = classes;
+          fatherToLi.appendChild(li);
+        }
+      }
+      //funçào para remover um elemento filho em determinada posição do elemento pai
+      function removeElement(father, position /*element*/) {
+        let fatherElem = document.querySelector(father);
+        // let elemToRemove = document.querySelector(element);  não sei pq não funcionou com elemento direto
+        fatherElem.removeChild(fatherElem.children[position]);
+      }
+
+      const myArr = [
+        "one",
+        "two",
+        "three",
+        "four",
+        "five",
+        "six",
+        "seven",
+        "eight",
+        "nine",
+        "ten",
+      ];
+      //ex 1
+      fatherChild("body", createChild("h1", "title"));
+      changeText("h1", "Exercício 5.2 - JavaScript DOM");
+      //ex 2
+      fatherChild("body", createChild("main", "main-content"));
+      //ex 3
+      fatherChild("main", createChild("section", "center-content"));
+      //ex 4
+      fatherChild("section", createChild("p"));
+      changeText("p", "Vamos aprender a manipular o DOM com JS e suas funções");
+      //ex 5
+      fatherChild("main", createChild("section", "left-content"));
+      //ex 6
+      fatherChild("main", createChild("section", "right-content"));
+      //ex 7
+      addImg("section", "https://picsum.photos/200", "small-image");
+      fatherChild(".right-content", createChild("ul"));
+      //ex 8
+      addLi("ul", myArr);
+      //ex 9, 1 e 2
+      for (let i = 0; i < 3; i += 1) {
+        fatherChild("main", createChild("h3", "description"));
+      }
+      //ex 3
+      removeElement(".main-content", 1);
+      //ex 4
+      document.querySelector(".right-content").style.marginRight = "auto";
+      //ex 5
+      document.querySelector(
+        ".center-content"
+      ).parentNode.style.backgroundColor = "green";
+      //ex 6
+      //passando ul para função e chamando a posição a ser deletada
+      removeElement("ul", 9);
+      removeElement("ul", 8);
+    </script>
+  </body>
+</html>
