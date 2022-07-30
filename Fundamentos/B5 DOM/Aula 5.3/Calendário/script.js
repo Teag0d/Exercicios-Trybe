@@ -26,25 +26,99 @@ let decemberDaysList = [
   29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
   21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
 ];
-
+//ex 1 e 2
+const divButtonsContainer = document.querySelector(".buttons-container");
 const ulIdDays = document.querySelector("#days");
-for (let i = 0; i < decemberDaysList.length; i++) {
-  const newLi = document.createElement("li");
-  newLi.innerHTML = decemberDaysList[i];
-  if (
-    decemberDaysList[i] === 24 ||
-    decemberDaysList[i] === 25 ||
-    decemberDaysList[i] === 31
-  ) {
-    newLi.className = "day holiday";
-  } else if (
-    decemberDaysList[i] === 4 ||
-    decemberDaysList[i] === 11 ||
-    decemberDaysList[i] === 18 ||
-    decemberDaysList[i] === 25
-  ) {
-    newLi.className = "day friday";
+
+function createLi(father, array) {
+  for (let i = 0; i < array.length; i++) {
+    const newLi = document.createElement("li");
+    newLi.innerHTML = array[i];
+    if (array[i] === 24 || array[i] === 31) {
+      newLi.className = "day holiday";
+    } else if (array[i] === 4 || array[i] === 11 || array[i] === 18) {
+      newLi.className = "day friday";
+    } else if (array[i] === 25) {
+      newLi.className = "day holiday friday";
+    } else {
+      newLi.className = "day";
+    }
+    father.appendChild(newLi);
   }
-  newLi.className = "day";
-  ulIdDays.appendChild(newLi);
 }
+function createElement(father, element, placeholder, classes) {
+  let createdElement = document.createElement(element);
+  createdElement.className = classes;
+  createdElement.innerText = placeholder;
+  father.appendChild(createdElement);
+}
+
+createLi(ulIdDays, decemberDaysList);
+createElement(divButtonsContainer, "button", "Feriados", "btn-holiday");
+const holidayButton = document.querySelector(".btn-holiday");
+//ex 3, 4 e 5
+let positionHoliday = 2;
+let positionFriday = 2;
+holidayButton.addEventListener("click", function () {
+  positionHoliday += 1;
+  let elemToChange = document.getElementsByClassName("holiday");
+  for (let i = 0; i < elemToChange.length; i++) {
+    if (positionHoliday % 2 !== 0) {
+      elemToChange[i].style.backgroundColor = "red";
+      elemToChange[i].style.color = "white";
+    } else {
+      elemToChange[i].style.backgroundColor = "rgb(238,238,238)";
+      elemToChange[i].style.color = "grey";
+    }
+  }
+});
+createElement(divButtonsContainer, "button", "Sexta-Feira", "btn-friday");
+const fridayButton = document.querySelector(".btn-friday");
+let textHolder = [];
+fridayButton.addEventListener("click", function () {
+  positionFriday += 1;
+  let elemToChange = document.getElementsByClassName("friday");
+  if (positionFriday === 3) {
+    for (let i = 0; i < elemToChange.length; i++) {
+      textHolder.push(elemToChange[i].innerText);
+    }
+  }
+  console.log(textHolder);
+
+  for (let i = 0; i < elemToChange.length; i++) {
+    if (positionFriday % 2 !== 0) {
+      elemToChange[i].innerHTML = "Sextoou!!";
+    } else {
+      elemToChange[i].innerHTML = textHolder[i];
+    }
+  }
+});
+
+// Ex 6
+// ulIdDays.addEventListener("mouseover", function (event) {
+//   event.target.style.fontSize = "30px";
+// });
+// ulIdDays.addEventListener("mouseout", function (event) {
+//   event.target.style.fontSize = "22px";
+// });
+
+function dayMouseOver() {
+  let days = document.querySelector("#days");
+  days.addEventListener("mouseover", function (event) {
+    event.target.style.fontSize = "30px";
+    event.target.style.fontWeight = "600"; // Ele pega o evento alvo e altera o estilo de fontWeight para 600
+  });
+}
+
+function dayMouseOut() {
+  let days = document.querySelector("#days");
+  days.addEventListener("mouseout", function (event) {
+    event.target.style.fontSize = "20px";
+    event.target.style.fontWeight = "200"; // Ele pega o evento alvo e altera o estilo de fontWeight para 200
+  });
+}
+
+dayMouseOut();
+dayMouseOver();
+
+//Ex 8
