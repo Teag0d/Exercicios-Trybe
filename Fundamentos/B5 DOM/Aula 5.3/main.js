@@ -30,8 +30,6 @@ thirdLi.addEventListener("click", function () {
 // console.log(allLi[0]);
 for (let i = 0; i < allLi.length; i++) {
   liFather.addEventListener("click", function (event) {
-    // console.log(allLi[i]);
-    console.log(event.target);
     let target = event.target;
     if (allLi[i] == target) {
       allLi[i].className = "tech";
@@ -44,16 +42,22 @@ for (let i = 0; i < allLi.length; i++) {
 // com a classe 'tech';
 input.addEventListener("change", function () {
   let text = document.getElementById("input").value;
+  let techElement = document.querySelector(".tech");
+  techElement.innerHTML = text;
 });
 
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
 // 4.1. Que tal redirecionar para seu portfólio?
-// myWebpage.addEventListener("dblclick", function () {});
+myWebpage.addEventListener("dblclick", function (event) {
+  window.open("https://thidurante.github.io/");
+});
 
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
-
+myWebpage.addEventListener("mouseover", function (event) {
+  event.target.style.color = "red";
+});
 // Segue abaixo um exemplo do uso de event.target:
 
 function resetText(event) {
