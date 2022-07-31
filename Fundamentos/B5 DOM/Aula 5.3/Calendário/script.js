@@ -121,4 +121,43 @@ function dayMouseOut() {
 dayMouseOut();
 dayMouseOver();
 
-//Ex 8
+//Ex  7 e 8
+function addTask(task, color) {
+  let father = document.querySelector(".my-tasks");
+  let createSpan = document.createElement("span");
+  let createDiv = document.createElement("div");
+  createDiv.style.backgroundColor = color;
+  createSpan.innerText = task;
+  father.appendChild(createSpan);
+  father.appendChild(createDiv);
+}
+addTask("Project Day", "blue");
+
+//ex 9
+function taskSelector(event) {
+  let selectDiv = document.querySelector(".my-tasks").childNodes[4];
+  selectDiv.addEventListener("click", function () {
+    if (selectDiv.className === "task-selected") {
+      selectDiv.className = "";
+    } else {
+      selectDiv.className = "task-selected";
+    }
+  });
+}
+taskSelector();
+
+//ex 10
+function paintTaskColor() {
+  ulIdDays.addEventListener("click", function (event) {
+    let getColor =
+      document.querySelector(".my-tasks").childNodes[4].style.backgroundColor;
+    let getClass = document.querySelector(".my-tasks").childNodes[4].className;
+    console.log(getClass, getColor);
+    if (getClass === "task-selected") {
+      event.target.style.color = getColor;
+    } else {
+      event.target.style.color = "grey";
+    }
+  });
+}
+paintTaskColor();
