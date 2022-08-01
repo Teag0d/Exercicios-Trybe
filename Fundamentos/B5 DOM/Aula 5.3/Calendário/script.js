@@ -161,3 +161,21 @@ function paintTaskColor() {
   });
 }
 paintTaskColor();
+
+//bonus
+function addCommitment() {
+  let list = document.querySelector(".task-list");
+  let input = document.getElementById("task-input");
+  let inputBox = document.querySelector("#btn-add");
+  inputBox.addEventListener("click", function () {
+    let text = input.value;
+    console.log(text);
+    if (text === "") {
+      alert("Por favor insira algo para adicionar");
+    } else {
+      createElement(list, "li", text);
+      input.value = "";
+    }
+  });
+}
+addCommitment();
