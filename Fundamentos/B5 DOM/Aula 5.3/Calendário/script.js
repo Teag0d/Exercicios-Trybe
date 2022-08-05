@@ -106,7 +106,7 @@ function dayMouseOver() {
   let days = document.querySelector("#days");
   days.addEventListener("mouseover", function (event) {
     event.target.style.fontSize = "30px";
-    event.target.style.fontWeight = "600"; // Ele pega o evento alvo e altera o estilo de fontWeight para 600
+    event.target.style.fontWeight = "600";
   });
 }
 
@@ -114,7 +114,7 @@ function dayMouseOut() {
   let days = document.querySelector("#days");
   days.addEventListener("mouseout", function (event) {
     event.target.style.fontSize = "20px";
-    event.target.style.fontWeight = "200"; // Ele pega o evento alvo e altera o estilo de fontWeight para 200
+    event.target.style.fontWeight = "200";
   });
 }
 
@@ -132,6 +132,7 @@ function addTask(task, color) {
   father.appendChild(createDiv);
 }
 addTask("Project Day", "blue");
+addTask("Interview Day", "red");
 
 //ex 9
 function taskSelector(event) {
@@ -151,7 +152,7 @@ function paintTaskColor() {
   ulIdDays.addEventListener("click", function (event) {
     let getColor =
       document.querySelector(".my-tasks").childNodes[4].style.backgroundColor;
-    let getClass = document.querySelector(".my-tasks").childNodes[4].className;
+    let getClass = document.querySelector(".my-tasks").childNodes[4].className; //como fazer o elemento ser a seleção do usario
     console.log(getClass, getColor);
     if (getClass === "task-selected") {
       event.target.style.color = getColor;
