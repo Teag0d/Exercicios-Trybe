@@ -23,5 +23,35 @@ const fatorial2 = (number) =>
 
 console.log(fatorial2(5));
 
-// const longestWord = (array) =>
-//   longestWord("Antônio foi no banheiro e não sabemos o que aconteceu");
+const longestWord = (string) => {
+  const array = string.split(" ");
+  let result = array[0];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].length > result.length) {
+      result = array[i];
+    }
+  }
+  return result;
+};
+
+console.log(
+  longestWord("Antônio foi no banheiro e não sabemos o que aconteceu")
+);
+
+const subX = (str) => {
+  return `Tryber ${str} aqui!`;
+};
+
+console.log(subX("Thiago"));
+
+const skills = ["HTML", "CSS", "JS", "TS", "JEST"];
+const mySkills = (subX, array) => {
+  const randomNumber = () => Math.floor(Math.random() * array.length);
+  return `${subX}
+  \nMinhas três principais habilidades são:
+  \n${array[randomNumber()]}
+  \n${array[randomNumber()]}
+  \n${array[randomNumber()]}`;
+};
+
+console.log(mySkills(subX("Thiago"), skills));
