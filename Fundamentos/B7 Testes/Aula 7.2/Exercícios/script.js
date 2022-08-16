@@ -139,7 +139,8 @@ console.log(verifyPair(lesson3, "turno", "noite"));
 console.log(verifyPair(lesson3, "materia", "Maria Clara"));
 
 // 🚀 Crie uma função para contar quantos estudantes assistiram às aulas de Matemática. Use o objeto criado no exercício 5.
-// 🚀 Crie uma função que deverá retornar um objeto que representa o relatório do professor ou professora, as aulas que ele ou ela ministrou e o número total de estudantes. Use o objeto criado no exercício 5:
+// 🚀 Crie uma função que deverá retornar um objeto que representa o relatório do professor ou professora,
+// as aulas que ele ou ela ministrou e o número total de estudantes. Use o objeto criado no exercício 5
 
 const countMathStudents = (obj) => {
   let keys = Object.keys(obj);
@@ -154,8 +155,36 @@ const countMathStudents = (obj) => {
 
 countMathStudents(allClasses);
 console.log(countMathStudents(allClasses));
-// console.log(index, i); // pq index ta vazando escopo? estava vazando escopo por falta do let antes do index
+// console.log(index, i); // pq index ta vazando escopo? estava vazando escopo por falta do let antes do index no course declara sem let
 
-const createReport = (obj, value) => {};
+const getLessons = (obj, value) => {
+  const lessons = [];
+  const keys = Object.keys(obj);
+  console.log(keys);
+  for (let i in keys) {
+    if (obj[keys[i]].professor === value) {
+      lessons.push(obj[keys[i]].materia);
+    }
+  }
+  return { Aulas: lessons };
+};
 
-// console.log(createReport(allLessons, "Maria Clara"));
+const allStudents = (obj, value) => {
+  let students = 0;
+  const keys = Object.keys(obj);
+  for (let i in keys) {
+    if (obj[keys[i]].professor === value) {
+      students += obj[keys[i]].numeroEstudantes;
+    }
+  }
+  return { estudantes: students };
+};
+
+const createReport = (obj, value) => {
+  const report = {};
+  report.professor = value;
+  Object.assign(report, getLessons(obj, value), allStudents(obj, value));
+  return report;
+};
+
+console.log(createReport(allClasses, "Maria Clara"));
