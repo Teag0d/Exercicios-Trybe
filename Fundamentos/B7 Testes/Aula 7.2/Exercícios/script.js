@@ -1,59 +1,59 @@
-// const order = {
-//   name: "Rafael Andrade",
-//   phoneNumber: "11-98763-1416",
-//   address: {
-//     street: "Rua das Flores",
-//     number: "389",
-//     apartment: "701",
-//   },
-//   order: {
-//     pizza: {
-//       marguerita: {
-//         amount: 1,
-//         price: 25,
-//       },
-//       pepperoni: {
-//         amount: 1,
-//         price: 20,
-//       },
-//     },
-//     drinks: {
-//       coke: {
-//         type: "Coca-Cola Zero",
-//         price: 10,
-//         amount: 1,
-//       },
-//     },
-//     delivery: {
-//       deliveryPerson: "Ana Silveira",
-//       price: 5,
-//     },
-//   },
-//   payment: {
-//     total: 60,
-//   },
-// };
+const order = {
+  name: "Rafael Andrade",
+  phoneNumber: "11-98763-1416",
+  address: {
+    street: "Rua das Flores",
+    number: "389",
+    apartment: "701",
+  },
+  order: {
+    pizza: {
+      marguerita: {
+        amount: 1,
+        price: 25,
+      },
+      pepperoni: {
+        amount: 1,
+        price: 20,
+      },
+    },
+    drinks: {
+      coke: {
+        type: "Coca-Cola Zero",
+        price: 10,
+        amount: 1,
+      },
+    },
+    delivery: {
+      deliveryPerson: "Ana Silveira",
+      price: 5,
+    },
+  },
+  payment: {
+    total: 60,
+  },
+};
 
-// const customerInfo = (order) => {
-//   // Adicione abaixo as informações necessárias.
-//   const customer = order.name;
-//   const cellPhone = order.phoneNumber;
-//   const adress = order.address;
-//   const deliveryPerson = order.order.delivery.deliveryPerson;
-//   console.log(
-//     `Olá ${deliveryPerson}, entrega para: ${customer}, Telefone ${cellPhone}, ${adress.street}, Num: ${adress.number}, AP: ${adress.apartment}`
-//   );
-// };
+const customerInfo = (order) => {
+  // Adicione abaixo as informações necessárias.
+  const customer = order.name;
+  const cellPhone = order.phoneNumber;
+  const adress = order.address;
+  const deliveryPerson = order.order.delivery.deliveryPerson;
+  console.log(
+    `Olá ${deliveryPerson}, entrega para: ${customer}, Telefone ${cellPhone}, ${adress.street}, Num: ${adress.number}, AP: ${adress.apartment}`
+  );
+};
 
-// customerInfo(order);
+customerInfo(order);
 
-// const orderModifier = (order) => {
-//   // Adicione abaixo as informações necessárias.
-//   const newBuyer = (order.name = "Thiago");
-//   const pizzas = Object.keys(order.order.pizza);
-// };
+const orderModifier = (order) => {
+  // Adicione abaixo as informações necessárias.
+  const newBuyer = (order.name = "Thiago");
+  const pizzas = Object.keys(order.order.pizza);
+};
 
-// orderModifier(order);
+orderModifier(order);
 
 const lesson1 = {
   materia: "Matemática",
@@ -126,7 +126,7 @@ const verifyPair = (obj, key, value) => {
   const keys = Object.keys(obj);
   const values = Object.values(obj);
   if (keys.includes(key) && values.includes(value)) {
-    for (let i = 0; i < keys.length; i++) {
+    for (i = 0; i < keys.length; i++) {
       if (keys[i] === key && values[i] === value) {
         return true;
       }
@@ -138,14 +138,14 @@ const verifyPair = (obj, key, value) => {
 console.log(verifyPair(lesson3, "turno", "noite"));
 console.log(verifyPair(lesson3, "materia", "Maria Clara"));
 
-// 🚀 Crie uma função para contar quantos estudantes assistiram às aulas de Matemática. Use o objeto criado no exercício 5.
-// 🚀 Crie uma função que deverá retornar um objeto que representa o relatório do professor ou professora,
-// as aulas que ele ou ela ministrou e o número total de estudantes. Use o objeto criado no exercício 5
+// // 🚀 Crie uma função para contar quantos estudantes assistiram às aulas de Matemática. Use o objeto criado no exercício 5.
+// // 🚀 Crie uma função que deverá retornar um objeto que representa o relatório do professor ou professora,
+// // as aulas que ele ou ela ministrou e o número total de estudantes. Use o objeto criado no exercício 5
 
 const countMathStudents = (obj) => {
   let keys = Object.keys(obj);
   result = 0;
-  for (let i in keys) {
+  for (i in keys) {
     if (obj[keys[i]].materia === "Matemática") {
       result += obj[keys[i]].numeroEstudantes;
     }
@@ -155,7 +155,7 @@ const countMathStudents = (obj) => {
 
 countMathStudents(allClasses);
 console.log(countMathStudents(allClasses));
-// console.log(index, i); // pq index ta vazando escopo? estava vazando escopo por falta do let antes do index no course declara sem let
+console.log(i); // pq index ta vazando escopo? estava vazando escopo por falta do let antes do index no course declara sem let
 
 const getLessons = (obj, value) => {
   const lessons = [];
@@ -188,3 +188,27 @@ const createReport = (obj, value) => {
 };
 
 console.log(createReport(allClasses, "Maria Clara"));
+
+// gabarito
+
+// const getInfo = (obj, name) => {
+//   const allLessons = [];
+//   let allStudent = 0;
+//   const array = Object.values(obj);
+//   for (index in array) {
+//     if (array[index].professor === name) {
+//       allLessons.push(array[index].materia)
+//       allStudent += array[index].numeroEstudantes;
+//     }
+//   }
+//   return { aulas: allLessons, estudantes: allStudent };
+// }
+
+// const createReport = (allLessons, name) => {
+//   const report = {};
+//   report.professor = name;
+//   Object.assign(report, getInfo(allLessons, name));
+//   return report;
+// }
+// console.log(createReport(allLessons, 'Maria Clara'));
+// console.log(index)
