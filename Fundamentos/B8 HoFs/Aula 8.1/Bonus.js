@@ -49,9 +49,31 @@ const damageCalculatorMage = (obj) => {
   if (damage < obj.intelligence) {
     damage = obj.intelligence;
   }
-  obj.mana = obj.mana - 15;
+  obj.mana -= 15;
   return damage;
 };
+const gameActions = {
+  warriorTurn: (damage, receiver) => {
+    const damageDone = damage(warrior);
+    receiver.healthPoints -= damageDone;
+    warrior.damage = damageDone;
+  },
+  mageTurn: (damage, receiver) => {
+    const damageDone = damage(mage);
+    receiver.healthPoints -= damageDone;
+    mage.damage = damageDone;
+  },
+  dragonTurn: (damage) => {
+    const damageDone = damage(mage);
+    warrior.healthPoints -= damageDone;
+    mage.healthPoints -= damageDone;
+    dragon.damage = damageDone;
+  },
+  result: battleMembers,
+};
 
-console.log(damageCalculatorMage(mage));
-console.log(mage);
+gameActions.warriorTurn(damageCalculatorWarrior, dragon);
+gameActions.mageTurn(damageCalculatorMage, dragon);
+gameActions.dragonTurn(damageCalculatorDragon);
+
+console.log(gameActions.result);
