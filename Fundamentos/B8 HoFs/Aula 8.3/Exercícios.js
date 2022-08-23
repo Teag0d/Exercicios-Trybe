@@ -67,7 +67,7 @@ const nameGenreAuthor = (data) =>
     (element) => `${element.name} - ${element.genre} - ${element.author.name}`
   );
 
-console.log(nameGenreAuthor(books));
+// console.log(nameGenreAuthor(books));
 
 const nameAndAgeWhenReleased = (data) =>
   data
@@ -79,4 +79,37 @@ const nameAndAgeWhenReleased = (data) =>
     })
     .sort((data1, data2) => data1.age - data2.age);
 
-console.log(nameAndAgeWhenReleased(books));
+// console.log(nameAndAgeWhenReleased(books));
+
+const filteredFantasyAndSciFy = (data) =>
+  data.filter(
+    (element) =>
+      element.genre === 'Fantasia' || element.genre === 'Ficção Científica'
+  );
+
+// console.log(filteredFantasyAndSciFy(books));
+
+const over60YearsSinceRelease = (data) =>
+  data
+    .filter((element) => 2022 - element.releaseYear > 60)
+    .sort((book1, book2) => book1.releaseYear - book2.releaseYear);
+
+// console.log(over60YearsSinceRelease(books));
+
+const fantasyAndScyFyAuthors = (data) =>
+  data
+    .filter(
+      (element) =>
+        element.genre === 'Fantasia' || element.genre === 'Ficção Científica'
+    )
+    .map((element) => element.author.name)
+    .sort();
+
+// console.log(fantasyAndScyFyAuthors(books));
+
+const over60YearsBookNames = (data) =>
+  data
+    .filter((element) => 2022 - element.releaseYear > 60)
+    .map((element) => element.name);
+
+// console.log(over60YearsBookNames(books));
