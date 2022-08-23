@@ -120,9 +120,9 @@ const authorWith3DotsOnName = (data) =>
       element.author.name[1] === '.' &&
       element.author.name[4] === '.' &&
       element.author.name[7] === '.'
-  );
+  )[0].author.name;
 
 // const authorWith3DotsOnName = (data) =>
-// data.filter((element) => element.author.name.includes())
+//   data.filter((element) => element.author.name.includes()); //usar REGEX
 
 console.log(authorWith3DotsOnName(books));
