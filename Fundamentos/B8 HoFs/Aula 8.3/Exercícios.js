@@ -113,3 +113,16 @@ const over60YearsBookNames = (data) =>
     .map((element) => element.name);
 
 // console.log(over60YearsBookNames(books));
+
+const authorWith3DotsOnName = (data) =>
+  data.filter(
+    (element) =>
+      element.author.name[1] === '.' &&
+      element.author.name[4] === '.' &&
+      element.author.name[7] === '.'
+  );
+
+// const authorWith3DotsOnName = (data) =>
+// data.filter((element) => element.author.name.includes())
+
+console.log(authorWith3DotsOnName(books));
