@@ -68,3 +68,15 @@ const nameGenreAuthor = (data) =>
   );
 
 console.log(nameGenreAuthor(books));
+
+const nameAndAgeWhenReleased = (data) =>
+  data
+    .map((element) => {
+      return {
+        age: element.releaseYear - element.author.birthYear,
+        author: element.author.name,
+      };
+    })
+    .sort((data1, data2) => data1.age - data2.age);
+
+console.log(nameAndAgeWhenReleased(books));
