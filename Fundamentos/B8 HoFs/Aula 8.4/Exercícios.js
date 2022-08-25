@@ -68,15 +68,14 @@ const books = [
 ];
 
 // Adicione o código do exercício aqui:
-// const reduceNames = (arr) => arr.map((element) => element.name).join(', ');
+// const reduceNames = (arr) =>
+//   arr.map((element) => element.author.name).join(', ');
 const reduceNames = (arr) =>
-  arr.reduce(
-    (acc, curr) => {
-      acc.name += curr.name;
-      return acc;
-    },
-    { name: '' }
-  );
+  arr.reduce((acc, curr) => {
+    !acc.author.name ? (acc.author.name = '') : acc.author.name;
+    acc.author.name += ', ' + curr.author.name;
+    return acc;
+  }).author.name;
 
 console.log(reduceNames(books));
 
@@ -115,4 +114,18 @@ const names = [
   'Alarucha',
 ];
 
-const containsA = (arr) => arr.reduce((acc, curr) => {});
+const containsA = (arr) => {
+  return arr.reduce(
+    //acc é só um elemento sem ligação direta com o que estamos iterando, curr é algo da lista que estamos passando por
+    (acc, currWord) =>
+      acc +
+      currWord.split('').reduce((accu, currLetter) => {
+        // mesma coisa aqui, reduce só funciona em arrays, split transforma pra array
+        currLetter === 'A' || currLetter === 'a' ? (accu += 1) : accu;
+        return accu;
+      }, 0),
+    0
+  );
+};
+
+console.log(containsA(names));
