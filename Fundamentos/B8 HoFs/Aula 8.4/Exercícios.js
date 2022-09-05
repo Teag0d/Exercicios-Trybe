@@ -137,13 +137,13 @@ const grades = [
   [10, 7, 10, 8, 9],
 ];
 
-const studentAverage = (studentsArr, gradesArr) => {
-  return (nameAndAverage = studentsArr.map((student, index) => ({
+const studentAverage = (studentsArr, gradesArr) =>
+  studentsArr.map((student, index) => ({
     name: student,
     average:
-      grades[index].reduce((acc, curr) => acc + curr, 0) / grades[index].length,
-  })));
-};
+      gradesArr[index].reduce((acc, curr) => acc + curr, 0) /
+      gradesArr[index].length,
+  }));
 
 console.log(studentAverage(students, grades));
 // const expected = [
