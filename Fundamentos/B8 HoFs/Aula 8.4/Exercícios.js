@@ -102,7 +102,6 @@ console.log(reduceNames(books));
 // // longestNamedBook(books);
 // console.log(longestNamedBook(books));
 
-<<<<<<< HEAD
 const names = [
   'Aanemarie',
   'Adervandes',
@@ -151,18 +150,6 @@ console.log(studentAverage(students, grades));
 //   { name: 'Pedro Henrique', average: 7.8 },
 //   { name: 'Miguel', average: 9.2 },
 //   { name: 'Maria Clara', average: 8.8 },
-=======
-// const names = [
-//   'Aanemarie',
-//   'Adervandes',
-//   'Akifusa',
-//   'Abegildo',
-//   'Adicellia',
-//   'Aladonata',
-//   'Abeladerco',
-//   'Adieidy',
-//   'Alarucha',
->>>>>>> 331aaa3a4a00cff74b057e950fd37dae172a7917
 // ];
 
 // const containsA = (arr) => {
